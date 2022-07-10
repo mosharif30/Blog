@@ -6,12 +6,12 @@ const Home = ({ posts }) => {
   return (
     <>
       <Head>
-        <title>Cms Blog</title>
+        <title>Amir Hossein Siadat</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container mx-auto px-10 mb-8 ">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className=" lg:col-span-8 col-span-1">
+      <div className="container mx-auto px-1 mb-2 ">
+        <div className="grid  grid-cols-1 lg:grid-cols-12 gap-3">
+          <div className="grid  lg:grid-cols-2 lg:col-span-8 col-span-1 gap-12 ">
             {posts.map((post) => (
               <PostCard post={post.node} key={post.title} />
             ))}

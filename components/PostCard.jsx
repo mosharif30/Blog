@@ -6,8 +6,8 @@ import React from "react";
 const PostCard = ({ post }) => {
   // console.log(post.categories[0].name);
   return (
-    <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
-      <div className="relative overflow-hidden shadow-md pb-80 mb-6">
+    <div className="bg-white shadow-lg rounded-lg p-0 lg:p-3 pb-3 mb-1 ">
+      <div className="relative overflow-hidden shadow-lg pb-80 mb-3 ">
         <img
           src={post.featuredImage.url}
           alt={post.title}
@@ -15,18 +15,18 @@ const PostCard = ({ post }) => {
         ></img>
       </div>
       <h1
-        className="transition duration-700 text-center mb-8 cursor-pointer text-black
-       hover:text-pink-600 text-3xl font-semibold"
+        className="transition duration-700 text-center mb-3 cursor-pointer text-gray-700
+       hover:text-pink-600 text-1xl font-semibold"
       >
         <Link href={`/post/${post.slug}`}>{post.categories[0].name}</Link>
       </h1>
       <h1
-        className="transition duration-700 text-center mb-8 cursor-pointer text-black
-       hover:text-pink-600 text-3xl font-semibold"
+        className="transition duration-700 text-center mb-3 cursor-pointer text-black
+       hover:text-pink-600 text-2xl font-semibold"
       >
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
-      <div className="block lg:flex text-center items-center justify-center mb-8 w-full">
+      <div className="block lg:flex text-center items-center justify-center mb-3 w-full">
         <div className="flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8 items-center">
           <Image
             unoptimized
@@ -64,13 +64,13 @@ const PostCard = ({ post }) => {
       <p className="text-center text-lg text-gray-700 font-normal px-1 lg:px-2 mb-8">
         {post.excerpt}
       </p>
-      <div className="text-center">
+      {/* <div className="text-center ">
         <Link href={`/post/${post.slug}`}>
-          <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
+          <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer ">
             Continue Reading
           </span>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
