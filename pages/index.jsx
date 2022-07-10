@@ -18,8 +18,8 @@ const Home = ({ posts }) => {
           </div>
           <div className="lg:col-span-4 col-span-1 bg-indigo-900">
             <div className="lg:sticky relative top-8">
-              <PostWidget />
               <Categories />
+              <PostWidget />
             </div>
           </div>
         </div>
