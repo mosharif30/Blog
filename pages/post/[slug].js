@@ -7,7 +7,7 @@ import {
   PostWidget,
   Author,
 
-  //   Loader,
+   Loader,
 } from "../../components";
 import { getPosts, getPostDetails } from "../../services";
 // import { AdjacentPosts } from "../../sections";
