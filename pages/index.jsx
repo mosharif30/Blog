@@ -6,7 +6,7 @@ const Home = ({ posts }) => {
   return (
     <>
       <Head>
-        <title>Amir Hossein Siadat</title>
+        <title>Amir Siadat</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container mx-auto px-1 mb-2 ">
