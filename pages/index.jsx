@@ -8,10 +8,9 @@ const Home = ({ posts }) => {
 
   useEffect(() => {
     getPosts().then((newPosts) => {
-      setSPosts(newPosts);
+      setSPosts(newPosts.reverse());
     });
   }, []);
-
   return (
     <>
       <Head>
