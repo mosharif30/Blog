@@ -72,11 +72,10 @@ const PostDetail = ({ post }) => {
         </div>
         <div className="px-4 lg:px-0">
           <div className="flex items-center mb-8 w-full">
-            
             <div className="font-medium text-gray-700">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 inline mr-2 text-pink-500"
+                className="h-6 w-6 inline mr-2 text-gray-900"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"

@@ -16,22 +16,21 @@ const PostCard = ({ post }) => {
       </div>
       <h1
         className="transition duration-700 text-center mb-3 cursor-pointer text-gray-700
-       hover:text-indigo-900 text-1xl font-semibold"
+       hover:text-gray-900 text-1xl font-semibold"
       >
         <Link href={`/post/${post.slug}`}>{post.categories[0].name}</Link>
       </h1>
       <h1
-        className="transition duration-200 text-center mb-3 cursor-pointer text-black
-       hover:text-indigo-900 text-2xl font-semibold"
+        className="transition duration-200 text-center mb-3 cursor-pointer text-gray-700
+       hover:text-gray-900 text-2xl font-semibold"
       >
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
       <div className="block lg:flex text-center items-center justify-center mb-3 w-full">
-       
-        <div className="font-medium text-gray-700">
+        <div className="font-medium text-gray-900">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 inline mr-2 text-pink-500"
+            className="h-6 w-6 inline mr-2 text-gray-900"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -48,12 +47,12 @@ const PostCard = ({ post }) => {
           </span>
         </div>
       </div>
-      <p className="text-center text-base text-indigo-900 font-normal px-1 lg:px-2 mb-8 py-5">
+      <p className="text-center text-base text-gray-900 font-normal px-1 lg:px-2 mb-8 py-5">
         {post.excerpt}
       </p>
       <div className=" text-center absolute inset-x-0 bottom-2">
         <Link href={`/post/${post.slug}`}>
-          <span className="bg-indigo-900 transition duration-500 ease transform hover:-translate-y-1 inline-block  text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer ">
+          <span className="bg-gray-900 transition duration-500 ease transform hover:-translate-y-1 inline-block  text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer ">
             Continue Reading
           </span>
         </Link>

@@ -24,7 +24,7 @@ const Home = ({ posts }) => {
               <PostCard post={post.node} key={post.node.title} />
             ))}
           </div>
-          <div className="lg:col-span-4 col-span-1 bg-indigo-900">
+          <div className="lg:col-span-4 col-span-1 bg-gray-900">
             <div className="lg:sticky relative top-8">
               <Categories />
               <PostWidget />

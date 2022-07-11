@@ -19,7 +19,7 @@ const CategoryPost = ({ posts }) => {
             <PostCard key={index} post={post.node} />
           ))}
         </div>
-        <div className="lg:col-span-4 col-span-1 bg-indigo-900">
+        <div className="lg:col-span-4 col-span-1 bg-gray-900">
           <div className="lg:sticky relative top-8">
             <Categories />
           </div>
