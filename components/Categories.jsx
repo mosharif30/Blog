@@ -29,7 +29,11 @@ const Categories = (place) => {
         </Link>
       ))}
       <Link href={`/about`}>
-        <span className={`cursor-pointer block hover:border-l-8  p-3 mb-3`}>
+        <span
+          className={`cursor-pointer block hover:border-l-8  p-3 mb-3 ${
+            place.place == "about" ? "bg-white text-gray-900" : "bg-gray-900"
+          }`}
+        >
           ABOUT
         </span>
       </Link>
