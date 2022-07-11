@@ -1,9 +1,17 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import { PostCard, PostWidget, Categories } from "../components";
 import { getPosts } from "../services/index";
 
 const Home = ({ posts }) => {
-  const reverseposts = posts.reverse();
+  const [sPosts, setSPosts] = useState([]);
+
+  useEffect(() => {
+    getPosts().then((newPosts) => {
+      setSPosts(newPosts);
+    });
+  }, []);
+  const reverseposts = sPosts.reverse();
   return (
     <>
       <Head>
