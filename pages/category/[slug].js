@@ -5,8 +5,6 @@ import { getCategories, getCategoryPost } from "../../services";
 import { PostCard, Categories, Loader } from "../../components";
 
 const CategoryPost = ({ posts }) => {
-  const reverseposts = posts.reverse();
-
   const router = useRouter();
 
   if (router.isFallback) {
@@ -17,7 +15,7 @@ const CategoryPost = ({ posts }) => {
     <div className="container mx-auto px-1 mb-2 ">
       <div className="grid  grid-cols-1 lg:grid-cols-12 gap-3">
         <div className="grid  lg:grid-cols-2 lg:col-span-8 col-span-1 gap-6">
-          {reverseposts.map((post, index) => (
+          {posts.map((post, index) => (
             <PostCard key={index} post={post.node} />
           ))}
         </div>
