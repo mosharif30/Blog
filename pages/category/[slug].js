@@ -10,18 +10,22 @@ const CategoryPost = ({ posts }) => {
   if (router.isFallback) {
     return <Loader />;
   }
-
   return (
-    <div className="container mx-auto px-1 mb-2 ">
+    <div className="container mx-auto px-0 mb-2 ">
       <div className="grid  grid-cols-1 lg:grid-cols-12 gap-3">
-        <div className="grid  lg:grid-cols-2 lg:col-span-8 col-span-1 gap-6">
-          {posts.reverse().map((post, index) => (
-            <PostCard key={index} post={post.node} />
-          ))}
-        </div>
-        <div className="lg:col-span-4 col-span-1 bg-gray-900">
+        <div className="lg:col-span-4 col-span-1 ">
           <div className="lg:sticky relative top-8">
-            <Categories />
+            <Categories place={router.query.slug} />
+            {/* <PostWidget /> */}
+          </div>
+        </div>
+
+        <div className="grid   lg:col-span-8 col-span-1 ">
+          <div className="bg-gray-900 text-white p-7 text-2xl mb-4">{router.query.slug}</div>
+          <div className="grid  lg:grid-cols-2   gap-6">
+            {posts.reverse().map((post, index) => (
+              <PostCard key={index} post={post.node} />
+            ))}
           </div>
         </div>
       </div>
