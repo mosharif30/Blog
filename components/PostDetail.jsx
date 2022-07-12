@@ -1,67 +1,22 @@
 import React from "react";
 
 import moment from "moment";
+import { RichText } from "@graphcms/rich-text-react-renderer";
+import Prism from "prismjs";
+import "prismjs/plugins/line-numbers/prism-line-numbers";
+import "prismjs/themes/prism-tomorrow.css";
+import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
 const PostDetail = ({ post }) => {
-  const getContentFragment = (index, text, obj, type) => {
-    let modifiedText = text;
-
-    if (obj) {
-      if (obj.bold) {
-        modifiedText = <b key={index}>{text}</b>;
-      }
-
-      if (obj.italic) {
-        modifiedText = <em key={index}>{text}</em>;
-      }
-
-      if (obj.underline) {
-        modifiedText = <u key={index}>{text}</u>;
-      }
-    }
-
-    switch (type) {
-      case "heading-three":
-        return (
-          <h3 key={index} className="text-xl font-semibold mb-4">
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </h3>
-        );
-      case "paragraph":
-        return (
-          <p key={index} className="mb-8">
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </p>
-        );
-      case "heading-four":
-        return (
-          <h4 key={index} className="text-md font-semibold mb-4">
-            {modifiedText.map((item, i) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </h4>
-        );
-      case "image":
-        return (
-          <img
-            key={index}
-            alt={obj.title}
-            height={obj.height}
-            width={obj.width}
-            src={obj.src}
-          />
-        );
-      default:
-        return modifiedText;
-    }
-  };
+  const content = post.content.raw;
+  const references = [];
+  React.useEffect(() => {
+    Prism.highlightAll();
+  }, []);
+  console.log(post);
 
   return (
-    <>
+    <div>
       <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
         <div className="relative overflow-hidden shadow-md mb-6">
           <img
@@ -93,16 +48,74 @@ const PostDetail = ({ post }) => {
             </div>
           </div>
           <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
-          {post.content.raw.children.map((typeObj, index) => {
-            const children = typeObj.children.map((item, itemindex) =>
-              getContentFragment(itemindex, item.text, item)
-            );
 
-            return getContentFragment(index, children, typeObj, typeObj.type);
-          })}
+          <RichText
+            content={content}
+            renderers={{
+              h1: ({ children }) => <h1 className={`wfafsa`}>{children}</h1>,
+              blockquote: ({ children }) => (
+                <blockquote
+                  style={{
+                    paddingLeft: "16px",
+                    borderLeft: "4px solid blue",
+                    fontSize: "26px",
+                  }}
+                >
+                  {children}
+                </blockquote>
+              ),
+              a: ({ children, href, openInNewTab }) => (
+                <a
+                  id={href.startsWith("endref") ? href : ""}
+                  // href={
+                  //   href.startsWith("endref")
+                  //     ? `#${href}p`
+                  //     : href.endsWith("p")
+                  //     ? `#${href}p`
+                  //     : href
+                  // }
+                  href={
+                    href.endsWith("p")
+                      ? `#${href.slice(0, -1)}`
+                      : href.startsWith("endref")
+                      ? `#${href}p`
+                      : href
+                  }
+                  target={openInNewTab ? "_blank" : "_self"}
+                  style={{ color: "blue" }}
+                  rel="noreferrer"
+                >
+                  {children}
+                </a>
+              ),
+              h2: ({ children }) => (
+                <h2 style={{ color: "darkcyan" }}>{children}</h2>
+              ),
+              bold: ({ children }) => <strong>{children}</strong>,
+              code_block: ({ children }) => {
+                return (
+                  <pre className="line-numbers language-none">
+                    <code>{children}</code>
+                  </pre>
+                );
+              },
+              Asset: {
+                application: () => (
+                  <div>
+                    <p>Asset</p>
+                  </div>
+                ),
+                text: () => (
+                  <div>
+                    <p>text plain</p>
+                  </div>
+                ),
+              },
+            }}
+          />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
