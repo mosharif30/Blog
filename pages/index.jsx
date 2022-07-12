@@ -4,13 +4,13 @@ import { PostCard, PostWidget, Categories } from "../components";
 import { getPosts } from "../services/index";
 
 const Home = ({ posts }) => {
-  const [sPosts, setSPosts] = useState([]);
+  // const [sPosts, setSPosts] = useState([]);
 
-  useEffect(() => {
-    getPosts().then((newPosts) => {
-      setSPosts(newPosts.reverse());
-    });
-  }, []);
+  // useEffect(() => {
+  //   getPosts().then((newPosts) => {
+  //     setSPosts(newPosts.reverse());
+  //   });
+  // }, []);
   return (
     <>
       <Head>
@@ -26,7 +26,7 @@ const Home = ({ posts }) => {
             </div>
           </div>
           <div className="grid  lg:grid-cols-2 lg:col-span-8 col-span-1 gap-6 ">
-            {sPosts.map((post) => (
+            {posts.reverse().map((post) => (
               <PostCard post={post.node} key={post.node.title} />
             ))}
           </div>
@@ -36,7 +36,7 @@ const Home = ({ posts }) => {
   );
 };
 export default Home;
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const posts = (await getPosts()) || [];
   return {
     props: { posts },
