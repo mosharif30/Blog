@@ -28,6 +28,17 @@ const Categories = (place) => {
           </span>
         </Link>
       ))}
+      <Link href={`/curriculum-vitae`}>
+        <span
+          className={`text-gray-200 font-bold cursor-pointer block hover:text-white  p-3 mb-3 text-right ${
+            place.place == "curriculum-vitae"
+              ? "bg-white text-black hover:text-black"
+              : "bg-customGray"
+          }`}
+        >
+          CURRICULUM VITAE
+        </span>
+      </Link>
       <Link href={`/about`}>
         <span
           className={`text-gray-200 font-bold cursor-pointer block hover:text-white  p-3 mb-3 text-right ${

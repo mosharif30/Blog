@@ -57,8 +57,13 @@ a {
   color: inherit;
   text-decoration: none;
 }
+@font-face {
+  font-family: myriadArabic;
+  src: url(/styles/Myriad\ Arabic\ Regular.ttf);
+}
 
 * {
   box-sizing: border-box;
+  //font-family: myriadArabic;
   font-family: Helvetica;
 }

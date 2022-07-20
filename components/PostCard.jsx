@@ -48,16 +48,16 @@ const PostCard = ({ post }) => {
             </span>
           </div>
         </div>
-        <p className="text-center text-base text-gray-900 font-normal px-1 lg:px-2 mb-8 py-5">
+        <div className="text-center text-base text-gray-900 font-normal px-1 lg:px-2 mb-2 py-5">
           {post.excerpt}{" "}
-          {/* <div className=" text-center absolute inset-x-0 bottom-2">
-        <Link href={`/post/${post.slug}`}>
-          <span className="bg-gray-900 transition duration-500 ease transform hover:-translate-y-1 inline-block  text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer ">
-            Continue Reading
+          <span className=" text-center  inset-x-0 bottom-2">
+            <Link href={`/post/${post.slug}`}>
+              <span className=" inline-block  text-lg font-medium rounded-full text-black px-0 py-0 cursor-pointer ">
+                Continue Reading
+              </span>
+            </Link>
           </span>
-        </Link>
-      </div> */}
-        </p>
+        </div>
         {/* <div className=" text-center absolute inset-x-0 bottom-2">
         <Link href={`/post/${post.slug}`}>
           <span className="bg-gray-900 transition duration-500 ease transform hover:-translate-y-1 inline-block  text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer ">
