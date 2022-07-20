@@ -14,14 +14,14 @@ const Categories = (place) => {
   // place.map((plc) => console.log(plc));
   //categories.map((category) => console.log(category.name.toLowerCase()));
   return (
-    <div className="text-white  shadow-lg rounded-lg p-8 pb-4 mb-10 bg-gray-900">
+    <div className="   rounded-lg p-8 pb-4 mb-10 bg-customGray">
       {categories.map((category, index) => (
         <Link key={index} href={`/category/${category.slug}`}>
           <span
-            className={`cursor-pointer block hover:border-l-8  p-3 mb-3 ${
+            className={`text-gray-200 font-bold cursor-pointer block hover:text-white p-3 mb-3 text-right ${
               place.place == category.name.toLowerCase().replaceAll(" ", "-")
-                ? "bg-white text-gray-900"
-                : "bg-gray-900"
+                ? "bg-white text-gray-800  hover:text-black"
+                : "bg-customGray text-white"
             }`}
           >
             {category.name}
@@ -30,8 +30,10 @@ const Categories = (place) => {
       ))}
       <Link href={`/about`}>
         <span
-          className={`cursor-pointer block hover:border-l-8  p-3 mb-3 ${
-            place.place == "about" ? "bg-white text-gray-900" : "bg-gray-900"
+          className={`text-gray-200 font-bold cursor-pointer block hover:text-white  p-3 mb-3 text-right ${
+            place.place == "about"
+              ? "bg-white text-black hover:text-black"
+              : "bg-customGray"
           }`}
         >
           ABOUT

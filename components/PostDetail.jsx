@@ -67,13 +67,7 @@ const PostDetail = ({ post }) => {
               a: ({ children, href, openInNewTab }) => (
                 <a
                   id={href.startsWith("endref") ? href : ""}
-                  // href={
-                  //   href.startsWith("endref")
-                  //     ? `#${href}p`
-                  //     : href.endsWith("p")
-                  //     ? `#${href}p`
-                  //     : href
-                  // }
+         
                   href={
                     href.endsWith("p")
                       ? `#${href.slice(0, -1)}`

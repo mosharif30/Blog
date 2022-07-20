@@ -12,7 +12,7 @@ const PostCard = ({ post }) => {
           <img
             src={post.featuredImage.url}
             alt={post.title}
-            className="object-top absolute h-52 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
+            className="object-top absolute h-52 w-full object-cover shadow-lg "
           ></img>
         </div>
         <h1
@@ -49,7 +49,14 @@ const PostCard = ({ post }) => {
           </div>
         </div>
         <p className="text-center text-base text-gray-900 font-normal px-1 lg:px-2 mb-8 py-5">
-          {post.excerpt}
+          {post.excerpt}{" "}
+          {/* <div className=" text-center absolute inset-x-0 bottom-2">
+        <Link href={`/post/${post.slug}`}>
+          <span className="bg-gray-900 transition duration-500 ease transform hover:-translate-y-1 inline-block  text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer ">
+            Continue Reading
+          </span>
+        </Link>
+      </div> */}
         </p>
         {/* <div className=" text-center absolute inset-x-0 bottom-2">
         <Link href={`/post/${post.slug}`}>

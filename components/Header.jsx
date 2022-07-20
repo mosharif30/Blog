@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getCategories } from "../services";
 
 const Header = () => {
-   const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   //  useEffect(() => {
   //    getCategories().then((newCategories) => {
@@ -12,11 +12,11 @@ const Header = () => {
   //    });
   //  }, []);
   return (
-    <div className="container mx-auto px-3 mb-8 ">
-      <div className="border-b w-full inline-block border-gray-900 py-8">
+    <div className="container bg-customGray mx-auto px-3 mb-8 mt-2">
+      <div className=" w-full inline-block  py-8">
         <div className="md:float-left block">
           <Link href="/">
-            <span className="cursor-pointer font-bold text-4xl ">
+            <span className="cursor-pointer  text-4xl text-gray-200">
               AMIR SIADAT
             </span>
           </Link>
