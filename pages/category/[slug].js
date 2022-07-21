@@ -21,10 +21,10 @@ const CategoryPost = ({ posts }) => {
         </div>
 
         <div className="grid   lg:col-span-9 col-span-1 ">
-          <div className="bg-gray-500 text-white p-5 text-2xl my-auto">
+          <div className="bg-customGray text-white p-5 text-2xl my-auto">
             {router.query.slug.toUpperCase()}
           </div>
-          <div className="grid  lg:grid-cols-2   gap-6">
+          <div className="grid  lg:grid-cols-2  mt-2 gap-6">
             {posts.reverse().map((post, index) => (
               <PostCard key={index} post={post.node} />
             ))}

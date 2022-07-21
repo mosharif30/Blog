@@ -18,9 +18,9 @@ const Categories = (place) => {
       {categories.map((category, index) => (
         <Link key={index} href={`/category/${category.slug}`}>
           <span
-            className={`text-gray-200 font-bold cursor-pointer block hover:text-white p-3 mb-3 text-right ${
+            className={`text-gray-200 font-bold cursor-pointer block hover:text-white p-3 mb-3 lg:text-right ${
               place.place == category.name.toLowerCase().replaceAll(" ", "-")
-                ? "bg-white text-gray-800  hover:text-black"
+                ? "bg-white text-gray-500 hover:text-black"
                 : "bg-customGray text-white"
             }`}
           >
@@ -30,9 +30,9 @@ const Categories = (place) => {
       ))}
       <Link href={`/curriculum-vitae`}>
         <span
-          className={`text-gray-200 font-bold cursor-pointer block hover:text-white  p-3 mb-3 text-right ${
+          className={`text-gray-200 font-bold cursor-pointer block hover:text-white  p-3 mb-3 lg:text-right ${
             place.place == "curriculum-vitae"
-              ? "bg-white text-black hover:text-black"
+              ? "bg-white text-gray-500 hover:text-black"
               : "bg-customGray"
           }`}
         >
@@ -41,9 +41,9 @@ const Categories = (place) => {
       </Link>
       <Link href={`/about`}>
         <span
-          className={`text-gray-200 font-bold cursor-pointer block hover:text-white  p-3 mb-3 text-right ${
+          className={`text-gray-200 font-bold cursor-pointer block hover:text-white  p-3 mb-3 lg:text-right ${
             place.place == "about"
-              ? "bg-white text-black hover:text-black"
+              ? "bg-white text-gray-500 hover:text-black"
               : "bg-customGray"
           }`}
         >

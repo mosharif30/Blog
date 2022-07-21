@@ -25,7 +25,7 @@ const Home = ({ posts }) => {
               {/* <PostWidget /> */}
             </div>
           </div>
-          <div className="grid  lg:grid-cols-2 lg:col-span-9 col-span-1 gap-6 ">
+          <div className="grid  lg:grid-cols-2 lg:col-span-9 lg:ml-3 col-span-1 gap-6 ">
             {posts.reverse().map((post) => (
               <PostCard post={post.node} key={post.node.title} />
             ))}

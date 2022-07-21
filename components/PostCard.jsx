@@ -7,7 +7,7 @@ const PostCard = ({ post }) => {
   // console.log(post.categories[0].name);
   return (
     <Link href={`/post/${post.slug}`}>
-      <div className="bg-white  cursor-pointer shadow-lg rounded-lg p-0 lg:p-6 pb-3 mb-1 relative hover:bg-gray-300">
+      <div className="bg-white  cursor-pointer shadow-lg rounded-lg p-0 lg:p-2 pb-1 mb-1 relative hover:bg-gray-300">
         <div className="relative overflow-hidden shadow-lg pb-52 mb-3 ">
           <img
             src={post.featuredImage.url}
@@ -52,7 +52,7 @@ const PostCard = ({ post }) => {
           {post.excerpt}{" "}
           <span className=" text-center  inset-x-0 bottom-2">
             <Link href={`/post/${post.slug}`}>
-              <span className=" inline-block  text-lg font-medium rounded-full text-black px-0 py-0 cursor-pointer ">
+              <span className=" inline-block   text-gray-500 hover:text-gray-900 px-0 py-0 cursor-pointer ">
                 Continue Reading
               </span>
             </Link>

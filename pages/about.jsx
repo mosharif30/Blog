@@ -17,7 +17,7 @@ const About = ({ posts }) => {
         </div>
 
         <div className="grid   lg:col-span-9 col-span-1 ">
-          <div className="bg-gray-500 text-white p-5 text-2xl my-auto">
+          <div className="bg-customGray text-white p-5 text-2xl my-auto">
             ABOUT
           </div>
           <span>
@@ -30,7 +30,7 @@ const About = ({ posts }) => {
             neque in elit porta, nec volutpat libero fringilla. Aenean id
             suscipit augue.
           </span>
-          <div className="bg-gray-500 text-white p-5 text-2xl my-auto">
+          <div className="bg-customGray text-white p-5 text-2xl my-auto">
             Contact
           </div>
           <span>
