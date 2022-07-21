@@ -285,35 +285,6 @@ const About = ({ posts }) => {
             Interviews” (With Sahar Khoshnam” [About a film by Mohammad Reza
             Aslani]). Tehran: Maktab-e Shahidsaless. 2022
           </span>
-          <div className="bg-customGray text-white p-5 text-xl my-3">
-            As the Director of Cinematheque of Tehran Museum of Contemporary
-            Arts:
-          </div>
-          <span>
-            - Three French film weeks with the presence of Jean Michel Frodon,
-            (Journalist, Critic and Historian of cinema). <br /> - Screening of
-            the works of Sohrab Shahid Saless (For the first time in Iran) with
-            collaboration of the German Embassy in Tehran <br />- Film Weeks in
-            collaboration with the Chinese, Polish and Algeria Cultural Center
-            in Tehran
-          </span>
-          <div className="bg-customGray text-white p-5 text-xl my-3">
-            As a Film Curator:
-          </div>
-          <span>
-            - Screening major essay documentaries in Iran with collaboration of
-            the National Archives Administration <br /> - Screening the oldest
-            images of Tehran on the occasion of Tehran Day with collaboration of
-            the National Archives Administration <br />- Screening the renovated
-            versions of the works by Amir Naderi, Mohammad Reza Aslani, Kamran
-            Shirdel, Dariush Farhang, Kianoush Ayari, Sohrab Shahid Saless and…
-            with the collaboration of the National Archives Administration
-            <br /> - An event to review Iran’s Amateur Cinema with collaboration
-            of Filmkhāneh Melli (National Film House)
-            <br /> - An event to review productions from Iran’s Kānun-e
-            Parvaresh-e Fekri-ye Kudakān va Nojavānān (Institute for the
-            Intellectual Development of Children and Young Adults)
-          </span>
         </div>
       </div>
     </div>
