@@ -90,9 +90,9 @@ const About = ({ posts }) => {
             <br />
             <a
               className="text-blue-600 hover:text-red-600"
-              href="https://iranian-studies.stanford.edu/Beizaeie-conference"
+              href="https://iranian-studies.stanford.edu/beyzaie-conference"
             >
-              https://iranian-studies.stanford.edu/Beizaeie-conference
+              https://iranian-studies.stanford.edu/beyzaie-conference
             </a>
             <br />
             <a
