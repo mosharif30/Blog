@@ -5,7 +5,6 @@ import { getCategories } from "../services";
 
 const Categories = (place, { cat }) => {
   const [categories, setCategories] = useState([]);
-  console.log("cat", cat);
   useEffect(() => {
     getCategories().then((newCategories) => {
       console.log("new", newCategories);
@@ -15,7 +14,7 @@ const Categories = (place, { cat }) => {
   // place.map((plc) => console.log(plc));
   //categories.map((category) => console.log(category.name.toLowerCase()));
   return (
-    <div className="    lg:pt-3 pb-4 lg:mb-10  bg-customGray">
+    <div className="    lg:pt-3 pb-4 lg:mb-10  ">
       {categories.map((category, index) => (
         <Link key={index} href={`/category/${category.slug}`}>
           <span
@@ -56,11 +55,3 @@ const Categories = (place, { cat }) => {
 };
 
 export default Categories;
-export async function getServerSideProps() {
-  getCategories().then((serverCategories) => {
-    const cat = serverCategories;
-    return {
-      props: { cat },
-    };
-  });
-}

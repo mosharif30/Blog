@@ -9,6 +9,7 @@ import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
 const PostDetail = ({ post }) => {
   const content = post.content.raw;
+  console.log(post);
   const references = [];
   React.useEffect(() => {
     Prism.highlightAll();
@@ -25,7 +26,7 @@ const PostDetail = ({ post }) => {
             className="object-top h-full w-full object-cover  shadow-lg -t-lg lg:"
           />
         </div>
-        <div className="px-4 lg:px-0">
+        <div className="px-1 lg:px-0 text-xs sm:text-sm md:text-base  ">
           <div className="flex items-center mb-8 w-full">
             <div className="font-medium text-gray-700">
               <svg
@@ -84,6 +85,7 @@ const PostDetail = ({ post }) => {
               h2: ({ children }) => (
                 <h2 style={{ color: "darkcyan" }}>{children}</h2>
               ),
+              p: ({ children }) => <p>{children}</p>,
               bold: ({ children }) => <strong>{children}</strong>,
               code_block: ({ children }) => {
                 return (

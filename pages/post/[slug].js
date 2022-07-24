@@ -19,9 +19,9 @@ const PostDetails = ({ post }) => {
 
   return (
     <>
-      <div className="container mx-auto px-0 mb-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className="col-span-1 lg:col-span-4 ">
+      <div className="container mx-auto px-0 mb-8 ">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 ">
+          <div className="col-span-1 lg:col-span-3 bg-customGray">
             <div className="relative lg:sticky top-8">
               <Categories place={post.categories[0].slug} />
               {/* <PostWidget
@@ -30,7 +30,7 @@ const PostDetails = ({ post }) => {
               /> */}
             </div>
           </div>
-          <div className="col-span-1 lg:col-span-8">
+          <div className="col-span-1 lg:col-span-9">
             <PostDetail post={post} />
             {/* <Author author={post.author} /> */}
             {/* <AdjacentPosts slug={post.slug} createdAt={post.createdAt} />
