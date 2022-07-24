@@ -17,12 +17,12 @@ const PostDetail = ({ post }) => {
 
   return (
     <div>
-      <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
+      <div className="bg-white shadow-lg  lg:p-8 pb-12 mb-8">
         <div className="relative overflow-hidden shadow-md mb-6">
           <img
             src={post.featuredImage.url}
             alt=""
-            className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg"
+            className="object-top h-full w-full object-cover  shadow-lg -t-lg lg:"
           />
         </div>
         <div className="px-4 lg:px-0">
@@ -67,7 +67,6 @@ const PostDetail = ({ post }) => {
               a: ({ children, href, openInNewTab }) => (
                 <a
                   id={href.startsWith("endref") ? href : ""}
-         
                   href={
                     href.endsWith("p")
                       ? `#${href.slice(0, -1)}`

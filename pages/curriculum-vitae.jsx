@@ -9,7 +9,7 @@ const About = ({ posts }) => {
   return (
     <div className="container mx-auto px-0 mb-2 ">
       <div className="grid  grid-cols-1 lg:grid-cols-12 gap-3">
-        <div className="lg:col-span-3 col-span-1 ">
+        <div className="lg:col-span-3 col-span-1 bg-customGray">
           <div className="lg:sticky relative top-8">
             <Categories place="curriculum-vitae" />
             {/* <PostWidget /> */}

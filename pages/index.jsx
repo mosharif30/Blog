@@ -19,13 +19,13 @@ const Home = ({ posts }) => {
       </Head>
       <div className="container mx-auto px-0 mb-2 ">
         <div className="grid  grid-cols-1 lg:grid-cols-12 gap-3">
-          <div className="lg:col-span-3 col-span-1 bg-customGray">
-            <div className="lg:sticky relative top-8 ">
+          <div className="xl:col-span-2 lg:col-span-3 col-span-1 bg-customGray">
+            <div className="lg:sticky relative top-4 ">
               <Categories />
               {/* <PostWidget /> */}
             </div>
           </div>
-          <div className="grid  lg:grid-cols-2 lg:col-span-9 lg:ml-3 col-span-1 gap-6 ">
+          <div className="grid  lg:grid-cols-2 lg:col-span-9 xl:col-span-10 lg:ml-3 col-span-1 gap-6 mt-8 lg:mt-0">
             {posts.reverse().map((post) => (
               <PostCard post={post.node} key={post.node.title} />
             ))}

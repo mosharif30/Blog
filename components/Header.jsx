@@ -13,10 +13,10 @@ const Header = () => {
   //  }, []);
   return (
     <div className="container bg-customGray mx-auto px-3 mb-8 mt-2">
-      <div className=" w-full inline-block  py-8">
+      <div className=" w-full inline-block  py-3 mt-1">
         <div className="md:float-left block">
           <Link href="/">
-            <span className="cursor-pointer ml-1 text-4xl text-gray-200">
+            <span className="cursor-pointer ml-2   sm:text-5xl text-4xl text-gray-200">
               AMIR SIADAT
             </span>
           </Link>

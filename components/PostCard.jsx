@@ -7,7 +7,7 @@ const PostCard = ({ post }) => {
   // console.log(post.categories[0].name);
   return (
     <Link href={`/post/${post.slug}`}>
-      <div className="bg-white  cursor-pointer shadow-lg rounded-lg p-0 lg:p-2 pb-1 mb-1 relative hover:bg-gray-300">
+      <div className="bg-white  cursor-pointer shadow-lg  p-0 lg:p-2 pb-1 mb-1 relative hover:bg-gray-300">
         <div className="relative overflow-hidden shadow-lg pb-52 mb-3 ">
           <img
             src={post.featuredImage.url}
