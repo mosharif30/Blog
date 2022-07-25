@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-
+import { SearchInput } from "./index";
 import { getCategories } from "../services";
 
 const Categories = (place, { cat }) => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     getCategories().then((newCategories) => {
-      console.log("new", newCategories);
+     
       setCategories(newCategories);
     });
   }, []);
@@ -15,6 +15,7 @@ const Categories = (place, { cat }) => {
   //categories.map((category) => console.log(category.name.toLowerCase()));
   return (
     <div className="    lg:pt-3 pb-4 lg:mb-10  ">
+      <SearchInput></SearchInput>
       {categories.map((category, index) => (
         <Link key={index} href={`/category/${category.slug}`}>
           <span
